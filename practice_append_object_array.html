@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appending an object to array</title>
+</head>
+<body>
+    <script>
+        //******Using push method*******
+        let array1 = [];
+        let obj = {
+            name: "preethi",
+            surname: "vannal"
+        };
+        array1.push(obj);
+        console.log(array1);
+
+        //*******Using splice method******
+        let array2 = ["banana", "orange"];
+        let fruits= {
+            name:"pineapple"
+        };
+        array2.splice(1, 0, fruits);
+        console.log(array2);
+
+        //******Using spread operator****
+        let array3 = [1,2,3];
+        let numbers={
+            words:["one", "two", "three"]
+        };
+        array3=[...array3,numbers];
+        console.log(array3);
+
+
+    </script>
+</body>
+</html>

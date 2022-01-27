@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 2.1</title>
+</head>
+<body>
+   <script>
+    findFreq = (str,char) => {
+        let count=0;
+        for(let i=0; i<str.length ; i++){
+            if(str[i]==char || str[i]==char.toUpperCase()){
+                count=count+1;
+            }
+        }
+        console.log(count);
+    }    
+    /*const findFreq = (str, char) => {
+        const re = new RegExp(char, 'gi');
+        const  count = str.match(re).length;
+        console.log(count);
+    }*/
+    let str=window.prompt("enter a string");
+    let char=window.prompt("enter a character you want to search");
+    findFreq(str,char);
+   </script> 
+</body>
+</html>

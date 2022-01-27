@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removing duplicates from array</title>
+</head>
+<body>
+    <script>
+        /*let arr=[1,2,3,2,3,2,3];
+        let new_arr=[];
+        for(let i=0;i<arr.length;i++){
+            for(let j=i+1;j<arr.length;j++){
+                if(arr[i]==arr[j]){
+                    arr.splice(j,arr[i]);
+                }
+            }
+        }
+        console.log(arr);*/
+
+        let arr=[1,2,3,2,3,2,3,4,5,5];
+        let new_arr=[];
+        let ct=0;
+        for(let i=0;i<arr.length;i++){
+            for(j=0;j<ct;j++){
+                if(arr[i]==new_arr[j]){
+                    break;
+                }
+            }
+            if(j==ct){
+                new_arr[ct]=arr[i];
+                ct++;
+            }
+        }
+        console.log(new_arr);
+    </script>
+</body>
+</html>
+

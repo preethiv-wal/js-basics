@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge4</title>
+</head>
+<body>
+    <script>
+        updateSalaries = (employeesArray, percent) => {
+            const updatedSalaries=[];
+            let i=0;
+            employeesArray.forEach((item) => {
+                updatedSalaries[i]=+item + +(item * (percent/100));
+                i++;
+            })
+            console.log(updatedSalaries);
+        }
+        const employeesArray=[];
+        let n = prompt("Enter the length of an array");
+        let percent=prompt("enter the percentage");
+        for(let i=0; i<n; i++){
+            employeesArray[i]=prompt("Enter an element in array");
+        }
+        console.log(employeesArray);
+        updateSalaries(employeesArray,percent);
+    </script>
+</body>
+</html>
